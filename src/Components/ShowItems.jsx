@@ -4,7 +4,7 @@ function ShowItems({items}) {
     return (
         <div className="product-list flex">
             {items.map((i) => (
-                <div className=' hover:scale-110 transition-transform prevent-select product shadow-xl w-1/5 bg-white p-3'  key={i.id}>
+                <div  className=' hover:scale-105 transition-transform prevent-select product shadow-xl w-1/5 bg-white p-3'  key={i.id}>
                     <img className='prevent-select-img w-96' src={i.image} alt={i.name} />
                     <h2 className='px-4 text-lg text-red-600 text-right'>{i.name}</h2>
                     <h3 className='text-lg px-4 text-black text-right'>{i.price} $</h3>
