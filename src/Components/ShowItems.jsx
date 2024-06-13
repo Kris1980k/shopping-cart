@@ -2,8 +2,7 @@ import React from 'react';
 
 function ShowItems({filteredItems,addItemToCart}) {
     return (
-        <div className="product-list flex w-128">
-            {console.log(filteredItems)}
+        <div className="product-list flex w-128 ">
             {filteredItems.map((i) => (
                 <div  className=' hover:scale-105 transition-transform prevent-select product shadow-xl w-1/5 bg-white p-3'  key={i.id}>
                     <img className='prevent-select-img w-96' src={i.image} alt={i.name} />

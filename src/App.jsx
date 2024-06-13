@@ -43,12 +43,15 @@ function App() {
 
     function addItemToCart (item){
 
-        const newItem = items.find((i) => i.id === item.id);
+        const newItem = cartItems.find((i) => i.id === item.id);
         if(newItem){
-
+            const newItems = cartItems.map((i) => 
+                i.id === item.id ? {...i, quantity:i.quantity + 1} : i
+            );
+            setCartItems(newItems);
         }
         else{
-            setCartItems([...cartItems,{...newItem,quantity:1}]);
+            setCartItems([...cartItems,{...item,quantity:1}]);
         }        
     }
 
