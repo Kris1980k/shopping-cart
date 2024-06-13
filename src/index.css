@@ -23,3 +23,19 @@
     -ms-user-select: none;
 }
 
+
+ul >  li{
+    /*px-3 hover:bg-red-700 h-full text-center  justify-center flex items-center*/
+    padding: 0 10px;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition-property: all;
+    transition-duration: 0.25s;
+}
+
+ul >li:hover{
+    background-color: rgb(185 ,28 ,28);
+}
