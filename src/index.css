@@ -39,3 +39,33 @@ ul >  li{
 ul >li:hover{
     background-color: rgb(185 ,28 ,28);
 }
+
+.search-bar{
+    height: 20vh;
+    padding: 0;
+}
+
+
+.gallery{
+    width: 25%;
+    height: 100%;
+}
+
+.img{
+    height: 100%;
+    width: 100%;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+
+@keyframes fade {
+    from {opacity: .2;}
+    to {opacity: 1;}
+    
+}
+
+.gal-img{    
+    width: 100%;
+    height: 100%;
+}

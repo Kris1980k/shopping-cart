@@ -10,31 +10,36 @@ function App() {
             id:1,
             name:"Vennicornia T-shirt for girl",
             price:350,
-            image:"src/img/playera-vennicornia-m-2024.png"
+            image:"src/img/playera-vennicornia-m-2024.png",
+            tags:["kids"]
         },
         {
             id:2,
             name:"B & W Retro Jersey S2024",
             price:900,
-            image:"src/img/casaca-negra-retro-m.jpg"
+            image:"src/img/casaca-negra-retro-m.jpg",
+            tags:["female","male"]
         },
         {
             id:3,
             name:"Serie del Caribe 2024 Jersey ",
             price:1200,
-            image:"src/img/jersey-sdc-verde-h-2024.jpg"
+            image:"src/img/jersey-sdc-verde-h-2024.jpg",
+            tags:["male"]
         },
         {
             id:4,
             name:"Venados Summer Jersey 2024",
             price:1300,
-            image:"src/img/jersey-palmas-verano-h.png"
+            image:"src/img/jersey-palmas-verano-h.png",
+            tags:["female"]
         },
         {
             id:5,
             name:"Venados X MS 2024",
             price:1300,
-            image:"src/img/jersey-banda-ms-roja-m.png"
+            image:"src/img/jersey-banda-ms-roja-m.png",
+            tags:["female,male,kids"]
         }
     ])
 
