@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css'
 import SearchComponent from './Components/SearchComponent'
 import ShowItems from './Components/ShowItems';
@@ -64,12 +65,43 @@ function App() {
         setSearchItem(e.target.value)
     }
 
+    function addItem(i){
+        let newItems = cartItems.map((cartI) => {
+            if (cartI.id === i.id){
+                return {...cartI, quantity:cartI.quantity + 1}
+            }
+            else {
+                return cartI
+            }
+        })
+        setCartItems(newItems)
+        console.log(i)
+    }
+    function deleteItem(i){
+        if(i.quantity > 1){
+            let newItems = cartItems.map((cartI) => {
+                if (cartI.id === i.id){
+                    return {...cartI, quantity:cartI.quantity - 1}
+                }
+                else {
+                    return cartI
+                }
+            }) 
+            setCartItems(newItems)
+        } 
+    }
+
     const filteredItems = items.filter((i) => i.name.toLowerCase().includes(searchItem))
     return (
-        <div className='App'>
-            <SearchComponent searchProductsByQuery={searchProductsByQuery} searchItem={searchItem}/>
-            <ShowItems filteredItems={filteredItems} addItemToCart={addItemToCart}/>
-            <Cart cartItems={cartItems}/>
+        <div className='App'>                                    
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/"  element={<SearchComponent searchProductsByQuery={searchProductsByQuery} searchItem={searchItem}/>}>
+                        <Route index  element={<ShowItems filteredItems={filteredItems} addItemToCart={addItemToCart}/>}/>
+                        <Route path="cart" element={<Cart cartItems={cartItems} addItem={addItem} deleteItem={deleteItem}/>}/>                    
+                    </Route>
+                </Routes>            
+            </BrowserRouter>
         </div>
     );
 }
