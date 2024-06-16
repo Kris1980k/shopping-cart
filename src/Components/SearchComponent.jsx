@@ -5,6 +5,17 @@ import {Outlet, Link} from 'react-router-dom'
 function SearchComponent({searchProductsByQuery,searchItem}) {
     let slideIndex = 1;
 
+    function deployHamburgerMenu (){
+        let menu = document.getElementById("hamburger-menu");
+        if(menu.classList.contains("hidden")){
+            menu.classList.remove("hidden");
+            menu.classList.add("block")
+        } else {
+            menu.classList.add("hidden");
+            menu.classList.remove("block")
+        }
+    }
+
     function showSlides() {
         let i;
         let slides = document.getElementsByClassName("img");
@@ -19,7 +30,8 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
 
     useEffect(() => {
         
-        showSlides(); 
+        showSlides();
+
     },[])
     return (
         <>
@@ -49,7 +61,7 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                     <input 
                     type="text"
                     placeholder='Search your products'    
-                    className='search-input rounded-lg  p-1 h-14 xl:text-lg lg:text-lg md:text-lg sm:text-lg text-sm xl:px-4 lg:px-4 md:px-4 sm:px-4 px-2 transition-all w-11/12'     
+                    className='search-input rounded-lg  p-1 h-14 xl:text-lg lg:text-lg md:text-lg sm:text-lg text-md xl:px-4 lg:px-4 md:px-4 sm:px-4 px-2 transition-all w-11/12'     
                     value={searchItem}
                     onChange={searchProductsByQuery}
                 />                
@@ -60,13 +72,23 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                     </div>                    
                 </div>
                 </div>
-                <div className='xl:w-72 lg:w-72 md:w-72 sm:w-72 m-4  border-2 border-red-500 xl:overflow-auto lg:overflow-auto md:overflow-auto sm:overflow-auto xl:block lg:block md:block sm:block xl:px-4 lg:px-4 md:px-4 sm:px-4  flex flex-col items-center '>
-                    <FontAwesomeIcon icon={faBars} className="text-red-600 h-6 px-4 w-4 hover:scale-125 transition-transform xl:hidden lg:hidden md:hidden sm:hidden block"/>
-                    <Link to="/cart"> 
-                        <FontAwesomeIcon icon={faCartShopping} className='text-red-600 h-6 px-4  hover:scale-125 transition-transform xl:block lg:block md:block sm:block hidden' /> 
-                    </Link>
-                    <FontAwesomeIcon icon={faUser} className=' text-red-600 h-6 px-4 hover:scale-125 transition-transform xl:block lg:block md:block sm:block hidden' />
-                    <FontAwesomeIcon icon={faSignOut} className='text-red-600 h-6 px-4 hover:scale-125 transition-transform xl:block lg:block md:block sm:block hidden'/>
+                <div className='xl:w-72 lg:w-72 md:w-72 sm:w-72 xl:m-4 lg:m-4 md:m-4 sm:m-4 xl:overflow-auto lg:overflow-auto md:overflow-auto sm:overflow-auto xl:block lg:block md:block sm:block xl:px-4 lg:px-4 md:px-4 sm:px-4  flex flex-col items-center '>
+                    <FontAwesomeIcon icon={faBars} className="text-red-600 h-10 px-4 w-5 hover:scale-125 transition-transform xl:hidden lg:hidden md:hidden sm:hidden block" onClick={()=>{deployHamburgerMenu()}}/>
+                    <div>
+                    <ul id='hamburger-menu' className='absolute'>
+                        <li>
+                        <Link to="/cart"> 
+                            <FontAwesomeIcon icon={faCartShopping} className='text-red-600 h-6 p-4  hover:scale-125 transition-transform xl:block lg:block md:block sm:block' /> 
+                        </Link>
+                        </li>
+                        <li>
+                        <FontAwesomeIcon icon={faUser} className=' text-red-600 h-6 p-4 hover:scale-125 transition-transform xl:block lg:block md:block sm:block' />
+                        </li>
+                        <li>
+                        <FontAwesomeIcon icon={faSignOut} className='text-red-600 h-6 p-4 hover:scale-125 transition-transform xl:block lg:block md:block sm:block'/>
+                    </li>
+                    </ul>
+                    </div>
                 </div>
             </div>
             <nav className='bg-red-600 text-white h-10 items-center flex w-full xl:overflow-auto lg:overflow-auto md:overflow-auto sm:overflow-auto overflow-scroll '>
