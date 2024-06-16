@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faCartShopping,faUser,faSignOut,faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+import {faCartShopping,faUser,faSignOut,faMagnifyingGlass,faBars} from '@fortawesome/free-solid-svg-icons'
 import {Outlet, Link} from 'react-router-dom'
 function SearchComponent({searchProductsByQuery,searchItem}) {
     let slideIndex = 1;
@@ -43,9 +43,9 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                 </div>
             </div>
             <img src="src\img\banner-venados.png" className='xl:block lg:block md:inline-block hidden border-red-600 prevent-select-img w-72 h-24 mx-10' alt="Venados logo" />
-            <img src="src\img\venados-logo.png" className='xl:hidden lg:hidden md:hidden sm:hidden block border-red-600 prevent-select-img w-32 h-20 mx-4' alt="Venados logo mobile" />
+            <img src="src\img\venados-logo.png" className='xl:hidden lg:hidden md:hidden sm:hidden  border-red-600 prevent-select-img w-32 h-20 mx-4' alt="Venados logo mobile" />
                 <div className='w-1/3'>
-                <div className='border-2 xl:flex lg:flex md:flex sm:flex hidden items-center '>
+                <div className='border-2 xl:flex lg:flex md:flex sm:flex flex items-center '>
                     <input 
                     type="text"
                     placeholder='Search your products'    
@@ -60,11 +60,14 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                     </div>                    
                 </div>
                 </div>
-                <Link to="/cart"> 
-                    <FontAwesomeIcon icon={faCartShopping} className='text-red-600 h-6 px-4 hover:scale-125 transition-transform' /> 
-                </Link>
-                <FontAwesomeIcon icon={faUser} className='text-red-600 h-6 px-4 hover:scale-125 transition-transform' />
-                <FontAwesomeIcon icon={faSignOut} className='text-red-600 h-6 px-4 hover:scale-125 transition-transform' />
+                <div className='xl:w-72 lg:w-72 md:w-72 sm:w-72 m-4  border-2 border-red-500 xl:overflow-auto lg:overflow-auto md:overflow-auto sm:overflow-auto xl:block lg:block md:block sm:block xl:px-4 lg:px-4 md:px-4 sm:px-4  flex flex-col items-center '>
+                    <FontAwesomeIcon icon={faBars} className="text-red-600 h-6 px-4 w-4 hover:scale-125 transition-transform xl:hidden lg:hidden md:hidden sm:hidden block"/>
+                    <Link to="/cart"> 
+                        <FontAwesomeIcon icon={faCartShopping} className='text-red-600 h-6 px-4  hover:scale-125 transition-transform xl:block lg:block md:block sm:block hidden' /> 
+                    </Link>
+                    <FontAwesomeIcon icon={faUser} className=' text-red-600 h-6 px-4 hover:scale-125 transition-transform xl:block lg:block md:block sm:block hidden' />
+                    <FontAwesomeIcon icon={faSignOut} className='text-red-600 h-6 px-4 hover:scale-125 transition-transform xl:block lg:block md:block sm:block hidden'/>
+                </div>
             </div>
             <nav className='bg-red-600 text-white h-10 items-center flex w-full xl:overflow-auto lg:overflow-auto md:overflow-auto sm:overflow-auto overflow-scroll '>
                 <div className='inline-block  h-full px-4 '>
