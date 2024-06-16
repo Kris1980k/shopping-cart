@@ -66,29 +66,29 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                 <FontAwesomeIcon icon={faUser} className='text-red-600 h-6 px-4 hover:scale-125 transition-transform' />
                 <FontAwesomeIcon icon={faSignOut} className='text-red-600 h-6 px-4 hover:scale-125 transition-transform' />
             </div>
-            <nav className='bg-red-600 text-white h-10 items-center '>
+            <nav className='bg-red-600 text-white h-10 items-center flex w-full xl:overflow-auto lg:overflow-auto md:overflow-auto sm:overflow-auto overflow-scroll '>
                 <div className='inline-block  h-full px-4 '>
-                    <div className='flex p-3 h-full items-center hover:bg-red-700 transition-all shadow-lg hover:shadow-red-800'>
-                        <p className=' lg:text-xl md:text-sm'>Home</p>
+                    <div className='flex p-3 h-full items-center hover:bg-red-700 transition-all xl:shadow-lg lg:shadow-lg md:shadow-lg sm:shadow-lg xl:hover:shadow-red-800 lg:hover:shadow-red-800 md:hover:shadow-red-800 sm:hover:shadow-red-800'>
+                        <p className='xl:text-xl lg:text-xl md:text-xl text-sm'>Home</p>
                     </div>
                 </div>
-                <ul className='float-right h-full flex items-center'>
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'>Female</li>
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Male</li>
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Kids</li>    
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li> 
-                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
-                </ul>                            
+                <ul className='float-end h-full flex items-center xl:overflow-auto lg:overflow-auto md:overflow-auto sm:overflow-auto overflow-scroll'>
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'>Female</li>
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Male</li>
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Kids</li>    
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li> 
+                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                </ul>                                        
             </nav>
         </header>
         <Outlet/>
