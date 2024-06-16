@@ -62,7 +62,7 @@ function App() {
     }
 
     function searchProductsByQuery (e) {
-        setSearchItem(e.target.value)
+        setSearchItem(e.target.value);
     }
 
     function addItem(i){

@@ -25,25 +25,27 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
         <>
         <header style={{'backgroundSize': "100% 100%"}} className='App-header  bg-cover'>
             <div className="search-bar bg-white px-4 py-2 flex items-center">
-            <div className="gallery  w-5/6 h-full shadow-black shadow-inner">
+            <div className="gallery xl:block lg:block md:block hidden w-5/6 h-full shadow-black shadow-inner">
                 <div className="img">
-                    <img className='gal-img' src="src/img/gallery/gallery_1.jpg" alt="" />
+                    <img className='gal-img prevent-select-img' src="src/img/gallery/gallery_1.jpg" alt="" />
                 </div>
                 <div className="img">
-                    <img className='gal-img' src="src/img/gallery/gallery_2.jpeg" alt="" />
+                    <img className='gal-img prevent-select-img' src="src/img/gallery/gallery_2.jpeg" alt="" />
                 </div>
                 <div className="img">
-                    <img className='gal-img' src="src/img/gallery/gallery_3.png" alt="" />
+                    <img className='gal-img prevent-select-img' src="src/img/gallery/gallery_3.png" alt="" />
                 </div>
                 <div className="img">
-                    <img className="gal-img" src="src/img/gallery/gallery_4.jpg" alt="" />
+                    <img className="gal-img prevent-select-img" src="src/img/gallery/gallery_4.jpg" alt="" />
                 </div>
                 <div className="img">
-                    <img className='gal-img' src="src/img/gallery/gallery_5.jpg" alt="" />
+                    <img className='gal-img prevent-select-img' src="src/img/gallery/gallery_5.jpg" alt="" />
                 </div>
             </div>
-            <img src="src\img\venados-logo.png" className='border-red-600 w-24 mx-5' alt="Venados logo" />
-                <div className='border-2 w-1/3 flex items-center'>
+            <img src="src\img\banner-venados.png" className='xl:block lg:block md:inline-block hidden border-red-600 prevent-select-img w-72 h-24 mx-10' alt="Venados logo" />
+            <img src="src\img\venados-logo.png" className='xl:hidden lg:hidden md:hidden sm:hidden block border-red-600 prevent-select-img w-32 h-20 mx-4' alt="Venados logo mobile" />
+                <div className='w-1/3'>
+                <div className='border-2 xl:flex lg:flex md:flex sm:flex hidden items-center '>
                     <input 
                     type="text"
                     placeholder='Search your products'    
@@ -57,6 +59,7 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                         </Link>
                     </div>                    
                 </div>
+                </div>
                 <Link to="/cart"> 
                     <FontAwesomeIcon icon={faCartShopping} className='text-red-600 h-6 px-4 hover:scale-125 transition-transform' /> 
                 </Link>
@@ -66,25 +69,25 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
             <nav className='bg-red-600 text-white h-10 items-center '>
                 <div className='inline-block  h-full px-4 '>
                     <div className='flex p-3 h-full items-center hover:bg-red-700 transition-all shadow-lg hover:shadow-red-800'>
-                        <p className=' text-xl'>Home</p>
+                        <p className=' lg:text-xl md:text-sm'>Home</p>
                     </div>
                 </div>
                 <ul className='float-right h-full flex items-center'>
-                <li className='shadow-lg hover:shadow-red-800'>Female</li>
-                <li className='shadow-lg hover:shadow-red-800'> Male</li>
-                <li className='shadow-lg hover:shadow-red-800'> Kids</li>    
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li> 
-                <li className='shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'>Female</li>
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Male</li>
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Kids</li>    
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li> 
+                <li className='md:text-sm md:w-10 md:px-6  shadow-lg hover:shadow-red-800'> Lorem</li>  
                 </ul>                            
             </nav>
         </header>

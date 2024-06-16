@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        'banner':"url('src/img/banner.png')"
+        'banner':"url('src/img/banner.png')",
+        'venados-shop':"url('src/img/banner-venados.png')"
       }
     },
   },

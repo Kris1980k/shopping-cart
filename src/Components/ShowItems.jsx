@@ -2,16 +2,16 @@ import React from 'react';
 
 function ShowItems({filteredItems,addItemToCart}) {
     return (
-        <div className="product-list flex w-128 items-center">
+        <div className="product-list grid xl:grid-cols-5 md:grid-cols-5 sm:grid-cols-5 grid-cols-2 sm:w-128 w-full h-screen ">
             {
             filteredItems.length > 0 ?
                 filteredItems.map((i) => (
-                <div  className=' hover:scale-105 transition-transform prevent-select product shadow-xl w-1/5 bg-white p-3'  key={i.id}>
-                    <img className='prevent-select-img w-96' src={i.image} alt={i.name} />
-                    <h2 className='px-4 text-lg text-red-600 text-right'>{i.name}</h2>
-                    <h3 className='text-lg px-4 text-black text-right'>{i.price} $</h3>
+                <div  className='overflow-clip lg:hover:scale-105 transition-transform prevent-select product shadow-xl border-2  bg-white p-3 ' key={i.id}>
+                    <img className='prevent-select-img xl:w-full sm:w-52 xl:h-56:h-10' src={i.image} alt={i.name} />
+                    <h2 className='xl:text-lg sm:text-2xl  px-4 text-red-600 text-right w-full xl:h-8'>{i.name}</h2>
+                    <h3 className='xl:text-lg sm:text-2xl px-4 py-2  text-black text-right xl:h-10'>{i.price} $</h3>
 
-                    <button onClick={()=>{addItemToCart(i)}} className='bg-red-600 text-white p-2 m-2 rounded-3xl float-right hover:shadow-lg hover:shadow-black/50 hover:bg-red-700'>Add to cart</button>
+                    <button onClick={()=>{addItemToCart(i)}} className='bg-red-600 text-white p-2 m-auto rounded-3xl float-right hover:shadow-lg hover:shadow-black/50 hover:bg-red-700 xl:w-28 lg:w-full sm:w-32 text-center'>Add to cart</button>
                 </div>
                 )) : 
                     <div className='h-96'>
