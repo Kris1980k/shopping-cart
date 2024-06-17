@@ -85,3 +85,16 @@ ul >li:hover{
     /*right: -0.8rem;
     top:7rem;  /*change for mobile responsiveness*/
 }
+.logo:hover{
+    animation-name: wump;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+}
+@keyframes wump {
+    10%{
+        transform: rotate(-1deg);
+    }
+    80%{
+        transform: rotate(1deg);
+    }
+}

@@ -5,8 +5,8 @@ import {faMinus,faPlus} from '@fortawesome/free-solid-svg-icons'
 
 function Cart({cartItems,addItem, deleteItem}) {
     return (
-        <div className=' flex flex-row '>            
-            <div className=' flex flex-col xl:shadow-2xl shadow-black xl:w-2/3 xl:m-3'>
+        <div className=' flex flex-row my-4 '>            
+            <div className=' flex flex-col xl:shadow-2xl shadow-black xl:w-4/6 xl:m-3'>
             <h1 className='text-2xl xl:px-12 xl:py-2 border-b-2 block'>Products</h1>
             {
             cartItems.length > 0 ? 
@@ -29,17 +29,21 @@ function Cart({cartItems,addItem, deleteItem}) {
             
             }            
             </div>            
-            <div className='m-10 w-1/3 flex flex-col items-center xl:shadow-2xl shadow-black xl:p-10 '>
-                <h1 className=' xl:text-3xl px-4'>Total</h1>
-                <h2 className='xl:text-2xl p-6'> $ 
-                {cartItems.reduce((c,i) => 
-                    c + (i.price * i.quantity)
-                ,0)}
-                <hr />
-                </h2>                
-                <button className='bg-green-600 hover:bg-gradient-to-tr hover:from-green-700 hover:to-green-500 hover:scale-105 transition rounded-md p-2 xl:w-52'>
-                    <h2 className='xl:text-xl text-white'>Pay</h2>
-                </button>
+            <div className='fixed xl:w-1/3 right-4 h-128 '>
+            <div className='m-10 w-full flex flex-col items-center xl:shadow-2xl shadow-black xl:p-10 h-full '>
+                <div className='flex items-center flex-col m-auto'>
+                    <h1 className=' xl:text-3xl px-4'>Total</h1>
+                    <h2 className='xl:text-2xl p-6'> $ 
+                    {cartItems.reduce((c,i) => 
+                        c + (i.price * i.quantity)
+                    ,0)}
+                    <hr />
+                    </h2>                
+                    <button className='bg-green-600 hover:bg-gradient-to-tr hover:from-green-700 hover:to-green-500 hover:scale-105 transition rounded-md p-2 xl:w-52'>
+                        <h2 className='xl:text-xl text-white'>Pay</h2>
+                    </button>
+                </div>
+            </div>
             </div>
         </div>
     );

@@ -54,14 +54,18 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                     <img className='gal-img prevent-select-img' src="src/img/gallery/gallery_5.jpg" alt="" />
                 </div>
             </div>
-            <img src="src\img\banner-venados.png" className='xl:block lg:block md:inline-block hidden border-red-600 prevent-select-img w-72 h-24 mx-10' alt="Venados logo" />
+            
+            <Link to="/" className=' xl:w-1/3 xl:h-24 xl:block mx-16  '>
+                <img src="src\img\banner-venados.png" className='logo xl:block lg:block md:inline-block transition-all hidden border-red-600 prevent-select-img w-72 h-24 mx-10' alt="Venados logo" />
+            </Link>
+
             <img src="src\img\venados-logo.png" className='xl:hidden lg:hidden md:hidden sm:hidden  border-red-600 prevent-select-img w-20 h-20 mx-4' alt="Venados logo mobile" />
                 <div className='w-2/3'>
                 <div className='border-2 xl:flex lg:flex md:flex sm:flex flex items-center '>
                     <input 
                     type="text"
                     placeholder='Search your products'    
-                    className='search-input rounded-lg  p-1 h-14 xl:text-lg lg:text-lg md:text-lg sm:text-lg text-md xl:px-4 lg:px-4 md:px-4 sm:px-4 px-2 transition-all w-11/12'     
+                    className='search-input rounded-lg  p-1 h-14 xl:text-lg lg:text-lg md:text-lg sm:text-lg text-md xl:px-4 lg:px-4 md:px-2 sm:px-4 px-2 transition-all xl:w-11/12'     
                     value={searchItem}
                     onChange={searchProductsByQuery}
                 />                
@@ -98,21 +102,21 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                     </div>
                 </div>
                 <ul className='float-end h-full flex items-center xl:overflow-visible lg:overflow-auto md:overflow-auto sm:overflow-auto overflow-scroll'>
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'>Female</li>
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Male</li>
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Kids</li>    
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li> 
-                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'>Female</li>
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Male</li>
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Kids</li>    
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li> 
+                <li className='xl:text-lg xl:w-14 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
                 </ul>                                        
             </nav>
         </header>
