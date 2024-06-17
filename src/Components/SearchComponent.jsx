@@ -35,7 +35,7 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
     },[])
     return (
         <>
-        <header style={{'backgroundSize': "100% 100%"}} className='App-header  bg-cover'>
+        <header style={{'backgroundSize': "100% 100%"}} className='App-header bg-cover'>
             <div className="search-bar bg-white px-4 py-2 flex items-center">
             <div className="gallery xl:block lg:block md:block hidden w-5/6 h-full shadow-black shadow-inner">
                 <div className="img">
@@ -72,20 +72,20 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                     </div>                    
                 </div>
                 </div>
-                <div className='xl:w-72 lg:w-72 md:w-72 sm:w-72 xl:m-4 lg:m-4 md:m-4 sm:m-4 xl:overflow-auto lg:overflow-auto md:overflow-auto sm:overflow-auto xl:block lg:block md:block sm:block xl:px-4 lg:px-4 md:px-4 sm:px-4  flex flex-col items-center '>
+                <div className='xl:w-72 lg:w-72 md:w-72 sm:w-72 xl:m-4 lg:m-4 md:m-4 sm:m-4 xl:overflow-visible lg:overflow-auto md:overflow-auto sm:overflow-auto xl:block lg:block md:block sm:block xl:px-4 lg:px-4 md:px-4 sm:px-4 items-center '>
                     <FontAwesomeIcon icon={faBars} className="text-red-600 h-10 px-4 w-5 hover:scale-125 transition-transform xl:hidden lg:hidden md:hidden sm:hidden block" onClick={()=>{deployHamburgerMenu()}}/>
                     <div>
-                    <ul id='hamburger-menu' className='absolute'>
+                    <ul id='hamburger-menu' className='xl:relative lg:relative md:relative sm:relative absolute flex'>
                         <li>
                         <Link to="/cart"> 
-                            <FontAwesomeIcon icon={faCartShopping} className='text-red-600 h-6 p-4  hover:scale-125 transition-transform xl:block lg:block md:block sm:block' /> 
+                            <FontAwesomeIcon icon={faCartShopping} className='text-red-600 h-6 p-4  hover:scale-125 hover:text-white transition-transform xl:block lg:block md:block sm:block' /> 
                         </Link>
                         </li>
                         <li>
-                        <FontAwesomeIcon icon={faUser} className=' text-red-600 h-6 p-4 hover:scale-125 transition-transform xl:block lg:block md:block sm:block' />
+                        <FontAwesomeIcon icon={faUser} className=' text-red-600 h-6 p-4 hover:scale-125 hover:text-white transition-transform xl:block lg:block md:block sm:block' />
                         </li>
                         <li>
-                        <FontAwesomeIcon icon={faSignOut} className='text-red-600 h-6 p-4 hover:scale-125 transition-transform xl:block lg:block md:block sm:block'/>
+                        <FontAwesomeIcon icon={faSignOut} className='text-red-600 h-6 p-4 hover:scale-125 hover:text-white transition-transform xl:block lg:block md:block sm:block'/>
                     </li>
                     </ul>
                     </div>
@@ -98,21 +98,21 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                     </div>
                 </div>
                 <ul className='float-end h-full flex items-center xl:overflow-auto lg:overflow-auto md:overflow-auto sm:overflow-auto overflow-scroll'>
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'>Female</li>
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Male</li>
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Kids</li>    
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li> 
-                <li className='text-sm w-2 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'>Female</li>
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Male</li>
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Kids</li>    
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li> 
+                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
                 </ul>                                        
             </nav>
         </header>

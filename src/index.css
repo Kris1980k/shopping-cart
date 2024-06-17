@@ -82,7 +82,6 @@ ul >li:hover{
 }
 
 #hamburger-menu{
-    background: green;
-    right: -0.8rem;
-    top:7rem;
+    /*right: -0.8rem;
+    top:7rem;  /*change for mobile responsiveness*/
 }
