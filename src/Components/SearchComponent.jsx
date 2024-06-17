@@ -97,22 +97,22 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                         <p className='xl:text-xl lg:text-xl md:text-xl text-sm'>Home</p>
                     </div>
                 </div>
-                <ul className='float-end h-full flex items-center xl:overflow-auto lg:overflow-auto md:overflow-auto sm:overflow-auto overflow-scroll'>
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'>Female</li>
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Male</li>
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Kids</li>    
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li> 
-                <li className='xl:text-lg xl:w-3 px-6 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <ul className='float-end h-full flex items-center xl:overflow-visible lg:overflow-auto md:overflow-auto sm:overflow-auto overflow-scroll'>
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'>Female</li>
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Male</li>
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Kids</li>    
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li> 
+                <li className='xl:text-lg xl:w-14 px-4 shadow-lg hover:shadow-red-800'> Lorem</li>  
                 </ul>                                        
             </nav>
         </header>
