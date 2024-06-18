@@ -1,25 +1,27 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faMinus,faPlus} from '@fortawesome/free-solid-svg-icons'
+import {faMinus,faPlus,faDollar} from '@fortawesome/free-solid-svg-icons'
 
 
 function Cart({cartItems,addItem, deleteItem}) {
     return (
-        <div className=' flex flex-row my-4 '>            
+        <div className=' flex flex-row xl:my-4 '>            
             <div className=' flex flex-col xl:shadow-2xl shadow-black xl:w-4/6 xl:m-3'>
-            <h1 className='text-2xl xl:px-12 xl:py-2 border-b-2 block'>Products</h1>
+            <h1 className='xl:text-3xl xl:px-12 xl:py-1 border-b-2 block'>Products</h1>
             {
             cartItems.length > 0 ? 
             cartItems.map((i) => (
                 <div key={i.id+ "InCart"} className='flex border-b-2 items-center '>
-                    <img src={i.image} alt={i.name} className='xl:w-52 xl:h-52 prevent-select-img' />
-                    <h2 className='xl:text-xl xl:w-72 px-2 prevent-select'>{i.name}</h2>
-                    <div className='border-2 flex items-center rounded-lg mx-5'>
+                    <img src={i.image} alt={i.name} className='xl:w-44 lg:w-44 md:w-44 sm:w-44 xl:h-44 lg:h-44 md:h-44 sm:h-44 prevent-select-img' />
+                    <h2 className='xl:text-xl xl:w-52 xl:px-2 prevent-select'>{i.name}</h2>
+                    <div className='border-2 flex items-center rounded-lg xl:mx-5 lg:mx-5 md:mx-5 sm:mx-5'>
                         <FontAwesomeIcon icon={faMinus} className='prevent-select px-2 hover:text-red-700' onClick={() => {deleteItem(i)}}/>
-                        <h3 className='prevent-select'>  {i.quantity} </h3>
+                        <h3 className='prevent-select xl:text-lg'>  {i.quantity} </h3>
                         <FontAwesomeIcon icon={faPlus} className='prevent-select px-2 hover:text-blue-700' onClick={() => {addItem(i)}}/>
                     </div>
-                    <h2 className='xl:w-14 xl:text-md prevent-select'> $ {i.price * i.quantity}</h2>
+                    <h2 className='xl:w-16 xl:text-xl prevent-select'> 
+                    <FontAwesomeIcon icon={faDollar} className='xl:text-lg'/> 
+                            {i.price * i.quantity}</h2>
                 </div>
             )) :
             
@@ -37,11 +39,12 @@ function Cart({cartItems,addItem, deleteItem}) {
                     <div className='xl:m-2'>
                         <div className='xl:h-72'></div>
                         <h1 className=' xl:text-2xl xl:px-2 xl:py-2 inline '>Total</h1>
-                        <h2 className=' xl:text-2xl xl:px-2 xl:py-2 inline float-right'> $ 
+                        <h2 className=' xl:text-2xl xl:px-2 xl:py-2 inline float-right'>
+                        <FontAwesomeIcon icon={faDollar} className='xl:text-xl'/>                         
                         {cartItems.reduce((c,i) => 
                             c + (i.price * i.quantity)
                         ,0)}
-                        </h2>       
+                        </h2>      
                         <button className='bg-green-600 hover:bg-gradient-to-tr xl:block hover:from-green-700 hover:to-green-500 hover:scale-105 transition  xl:h-12 xl:w-full xl:mx-auto xl:my-4  '>
                             <h2 className='xl:text-xl text-white'>Pay</h2>
                         </button>
