@@ -37,7 +37,7 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
         <>
         <header style={{'backgroundSize': "100% 100%"}} className='App-header bg-cover'>
             <div className="search-bar bg-white px-4 py-2 flex items-center">
-            <div className="gallery xl:block lg:block md:block hidden w-5/6 h-full shadow-black shadow-inner">
+            <div className="gallery xl:block lg:block md:block hidden xl:w-5/6 lg:w-5/6 md:w-5/6 sm:w-5/6 h-full shadow-black shadow-inner">
                 <div className="img">
                     <img className='gal-img prevent-select-img' src="src/img/gallery/gallery_1.jpg" alt="" />
                 </div>
@@ -55,23 +55,25 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                 </div>
             </div>
             
-            <Link to="/" className=' xl:w-1/3 xl:h-24 xl:block mx-16  '>
+            <Link to="/" className=' xl:w-1/3 xl:h-24 xl:block xl:mx-16 lg:mx-16 md:mx-16 sm:mx-16 mx-0  '>
                 <img src="src\img\banner-venados.png" className='logo xl:block lg:block md:inline-block transition-all hidden border-red-600 prevent-select-img w-72 h-24 mx-10' alt="Venados logo" />
             </Link>
 
-            <img src="src\img\venados-logo.png" className='xl:hidden lg:hidden md:hidden sm:hidden  border-red-600 prevent-select-img w-20 h-20 mx-4' alt="Venados logo mobile" />
+            <img src="src\img\venados-logo.png" className='xl:hidden lg:hidden md:hidden sm:hidden  border-red-600 prevent-select-img w-20  h-20 mx-4' alt="Venados logo mobile" />
+
+
                 <div className='w-2/3'>
                 <div className='border-2 xl:flex lg:flex md:flex sm:flex flex items-center '>
                     <input 
                     type="text"
                     placeholder='Search your products'    
-                    className='search-input rounded-lg  p-1 h-14 xl:text-lg lg:text-lg md:text-lg sm:text-lg text-md xl:px-4 lg:px-4 md:px-2 sm:px-4 px-2 transition-all xl:w-11/12'     
+                    className='search-input rounded-lg  p-1 h-14 xl:text-lg lg:text-lg md:text-lg sm:text-lg text-md xl:px-4 lg:px-4 md:px-2 sm:px-4 px-2 transition-all xl:w-11/12 w-10/12'     
                     value={searchItem}
                     onChange={searchProductsByQuery}
                 />                
-                    <div className=' h-14 flex items-center border-l-2 w-20 hover:bg-red-600 m-glass-div transition-colors'>
+                    <div className='h-14 flex items-center border-l-2 w-20 hover:bg-red-600 m-glass-div transition-colors'>
                         <Link to="/" className='w-full'>
-                        <FontAwesomeIcon className='w-full float-right h-5 text-gray-400 m-glass transition-colors' icon={faMagnifyingGlass} />
+                        <FontAwesomeIcon className='w-full float-right xl:h-5 lg:h-5 md:h-5 sm:h-5 h-5 text-gray-400 m-glass transition-colors' icon={faMagnifyingGlass} />
                         </Link>
                     </div>                    
                 </div>
