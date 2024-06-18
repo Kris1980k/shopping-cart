@@ -61,7 +61,7 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
 
             <img src="src\img\venados-logo.png" className='xl:hidden lg:hidden md:hidden sm:hidden  border-red-600 prevent-select-img w-20 h-20 mx-4' alt="Venados logo mobile" />
 
-                <div className='xl:w-3/6 lg:w-full md:w-full sm:w-full xl:mx-4 lg:mx-4 md:mx-4 sm:mx-4'>
+                <div className='xl:w-3/6 lg:w-full md:w-full sm:w-full w-7/12 xl:mx-4 lg:mx-4 md:mx-4 sm:mx-4'>
                     <div className='border-2 xl:flex lg:flex md:flex sm:flex flex items-center '>
                         <input 
                         type="text"
@@ -78,9 +78,9 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                     </div>
                 </div>
                 <div className='xl:w-72 lg:w-72 md:w-72 sm:w-72 xl:m-4 lg:m-4 md:m-4 sm:m-4 xl:overflow-visible lg:overflow-auto md:overflow-auto sm:overflow-auto xl:block lg:block md:block sm:block xl:px-4 lg:px-4 md:px-4 sm:px-4 items-center '>
-                    <FontAwesomeIcon icon={faBars} className="text-red-600 h-10 px-4 w-5 hover:scale-125 transition-transform xl:hidden lg:hidden md:hidden sm:hidden block" onClick={()=>{deployHamburgerMenu()}}/>
+                    <FontAwesomeIcon icon={faBars} className="text-red-600 h-10 ml-4 w-4  hover:scale-125 transition-transform xl:hidden lg:hidden md:hidden sm:hidden block" onClick={()=>{deployHamburgerMenu()}}/>
                     <div>
-                    <ul id='hamburger-menu' className='xl:relative lg:relative md:relative sm:relative absolute xl:right-10 -right-1 w-16 xl:border-0 lg:border-0 md:border-0 sm:border-0 border-2 xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white xl:flex lg:flex md:flex sm:flex z-20'>
+                    <ul id='hamburger-menu' className='xl:relative lg:relative md:relative sm:relative absolute xl:right-10 right-1 w-12 xl:border-0 lg:border-0 md:border-0 sm:border-0 border-2 xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white xl:flex lg:flex md:flex sm:flex z-20'>
                         <li>
                         <Link to="/cart"> 
                             <FontAwesomeIcon icon={faCartShopping} className='text-red-600 h-6 p-4  hover:scale-125 hover:text-white transition-transform xl:block lg:block md:block sm:block' /> 
