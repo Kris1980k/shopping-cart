@@ -44,7 +44,16 @@ function App() {
         }
     ])
 
-    const [cartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useState([
+        {
+            id:5,
+            name:"Venados X MS 2024",
+            price:1300,
+            image:"src/img/jersey-banda-ms-roja-m.png",
+            tags:["female,male,kids"],
+            quantity:3
+        }
+    ]);
     const [searchItem,setSearchItem] = useState('');
 
     function addItemToCart (item){

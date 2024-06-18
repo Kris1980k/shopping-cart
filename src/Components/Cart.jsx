@@ -29,21 +29,24 @@ function Cart({cartItems,addItem, deleteItem}) {
             
             }            
             </div>            
-            <div className='fixed xl:w-1/3 right-4 h-128 '>
-            <div className='m-10 w-full flex flex-col items-center xl:shadow-2xl shadow-black xl:p-10 h-full '>
-                <div className='flex items-center flex-col m-auto'>
-                    <h1 className=' xl:text-3xl px-4'>Total</h1>
-                    <h2 className='xl:text-2xl p-6'> $ 
-                    {cartItems.reduce((c,i) => 
-                        c + (i.price * i.quantity)
-                    ,0)}
-                    <hr />
-                    </h2>                
-                    <button className='bg-green-600 hover:bg-gradient-to-tr hover:from-green-700 hover:to-green-500 hover:scale-105 transition rounded-md p-2 xl:w-52'>
-                        <h2 className='xl:text-xl text-white'>Pay</h2>
-                    </button>
+            <div className='xl:px-10 fixed xl:w-1/3 right-4 h-128 '>                        
+                <div className=' w-full xl:shadow-2xl shadow-black h-full  '>            
+                    <div className='xl:px-4 xl:py-2 border-b-2'>
+                        <h1 className='xl:text-3xl'>Resume</h1>
+                    </div>
+                    <div className='xl:m-2'>
+                        <div className='xl:h-72'></div>
+                        <h1 className=' xl:text-2xl xl:px-2 xl:py-2 inline '>Total</h1>
+                        <h2 className=' xl:text-2xl xl:px-2 xl:py-2 inline float-right'> $ 
+                        {cartItems.reduce((c,i) => 
+                            c + (i.price * i.quantity)
+                        ,0)}
+                        </h2>       
+                        <button className='bg-green-600 hover:bg-gradient-to-tr xl:block hover:from-green-700 hover:to-green-500 hover:scale-105 transition  xl:h-12 xl:w-full xl:mx-auto xl:my-4  '>
+                            <h2 className='xl:text-xl text-white'>Pay</h2>
+                        </button>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
     );
