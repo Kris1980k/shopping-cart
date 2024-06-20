@@ -14,15 +14,16 @@ function Cart({cartItems,addItem, deleteItem}) {
                     cartItems.map((i) => (
                         <div key={i.id+ "InCart"} className='flex border-b-2 items-center '>
                             <img src={i.image} alt={i.name} className='xl:w-44 lg:w-44 md:w-44 sm:w-44 w-24 xl:h-44 lg:h-44 md:h-44 sm:h-44 h-24 prevent-select-img' />
-                            <h2 className='xl:text-xl lg:text-xl md:text-xl sm:text-xl text-md xl:w-52 lg:w-52 md:w-52 sm:w-52 w-40 xl:px-2 prevent-select'>{i.name}</h2>
+                            <h2 className='xl:text-xl lg:text-xl md:text-xl sm:text-xl text-md xl:w-52 lg:w-52 md:w-52 sm:w-52 w-32 xl:px-2 prevent-select'>{i.name}</h2>
                             <div className='border-2 flex items-center rounded-lg xl:mx-5 lg:mx-5 md:mx-5 sm:mx-5 mx-2'>
                                 <FontAwesomeIcon icon={faMinus} className='prevent-select px-2 hover:text-red-700' onClick={() => {deleteItem(i)}}/>
                                 <h3 className='prevent-select xl:text-lg'>  {i.quantity} </h3>
                                 <FontAwesomeIcon icon={faPlus} className='prevent-select px-2 hover:text-blue-700' onClick={() => {addItem(i)}}/>
                             </div>
-                            <h2 className='xl:w-16 xl:text-xl prevent-select'> 
-                            <FontAwesomeIcon icon={faDollar} className='xl:text-lg'/> 
-                                    {i.price * i.quantity}</h2>
+                             
+                            <FontAwesomeIcon icon={faDollar} className='xl:text-lg lg:text-lg md:text-lg sm:text-lg text-md'/> 
+                            <h2 className='xl:w-16 lg:w-16 md:w-16 sm:w-16 w-14 xl:text-xl lg:text-lg md:text-lg sm:text-lg text-md prevent-select'>
+                            {i.price * i.quantity}</h2>
                         </div>
                     )) :
                     
@@ -40,13 +41,17 @@ function Cart({cartItems,addItem, deleteItem}) {
                     </div>
                     <div className='xl:m-2 m-2'>
                         <div className='xl:h-72'></div>
-                        <h1 className=' xl:text-2xl xl:px-2 xl:py-2 inline'>Total</h1>
-                        <h2 className=' xl:text-2xl xl:px-2 xl:py-2 inline float-right'>
-                        <FontAwesomeIcon icon={faDollar} className='xl:text-xl'/>                         
-                        {cartItems.reduce((c,i) => 
-                            c + (i.price * i.quantity)
-                        ,0)}
-                        </h2>      
+                        <h1 className=' xl:text-2xl lg:text-2xl md:text-2xl sm:text-2xl text-xl xl:px-2 xl:py-2 inline'>Total</h1>
+                        <div className='float-right flex items-center'>
+                            <h2 className=' xl:text-2xl xl:px-2 xl:py-2'>
+                            <FontAwesomeIcon icon={faDollar} className='xl:text-xl lg:text-xl md:text-xl sm:text-xl text-lg xl:mr-0 lg:mr-0 md:mr-0 sm:mr-0 mr-2'/>
+                            </h2>
+                            <h3 className='xl:text-xl lg:text-xl md:text-xl sm:text-xl text-xl '>
+                            {cartItems.reduce((c,i) => 
+                                c + (i.price * i.quantity)
+                            ,0)}
+                            </h3>
+                        </div>                                                      
                         <button className='bg-green-600 hover:bg-gradient-to-tr xl:block lg:block md:block sm:block block hover:from-green-700 hover:to-green-500 hover:scale-105 transition  xl:h-12 lg:h-12 md:h-12 sm:h-12 h-12 xl:w-full lg:w-full md:w-full sm:w-full w-full xl:mx-auto xl:my-4 lg:my-4 md:my-4 sm:my-4 my-4  '>
                             <h2 className='xl:text-xl lg:text-xl md:text-xl sm:text-xl text-2xl text-white'>Pay</h2>
                         </button>

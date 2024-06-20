@@ -59,7 +59,9 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                 <img src="src\img\banner-venados.png" className='logo xl:block lg:block md:inline-block transition-all hidden border-red-600 prevent-select-img w-full h-24 ' alt="Venados logo" />
             </Link>
 
-            <img src="src\img\venados-logo.png" className='xl:hidden lg:hidden md:hidden sm:hidden  border-red-600 prevent-select-img w-20 h-20 mx-4' alt="Venados logo mobile" />
+            <Link to="/" className='xl:hidden lg:hidden md:hidden sm:hidden w-20 mx-2 h-20'>
+                <img src="src\img\venados-logo.png" className='xl:hidden lg:hidden md:hidden sm:hidden prevent-select-img w-20 h-20 ' alt="Venados logo mobile" />
+            </Link>
 
                 <div className='xl:w-3/6 lg:w-full md:w-full sm:w-full w-7/12 xl:mx-4 lg:mx-4 md:mx-4 sm:mx-4'>
                     <div className='border-2 xl:flex lg:flex md:flex sm:flex flex items-center '>
