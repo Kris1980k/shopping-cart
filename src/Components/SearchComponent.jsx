@@ -35,8 +35,8 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
     },[])
     return (
         <>
-        <header style={{'backgroundSize': "100% 100%"}} className='App-header bg-cover'>
-            <div className="search-bar bg-white px-4 py-2 flex items-center">
+        <header style={{'backgroundSize': "100% 100%"}} className='z-10 fixed border-2 w-full App-header bg-cover'>            
+            <div className="search-bar bg-white px-4 py-2 w-full flex justify-between items-center">
             <div className="gallery xl:block lg:block md:block hidden xl:w-2/6 lg:w-2/6 md:w-2/6 sm:w-2/6 h-full shadow-black shadow-inner">
                 <div className="img">
                     <img className='gal-img prevent-select-img' src="src/img/gallery/gallery_1.jpg" alt="" />
@@ -59,8 +59,8 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                 <img src="src\img\banner-venados.png" className='logo xl:block lg:block md:inline-block transition-all hidden border-red-600 prevent-select-img w-full h-24 ' alt="Venados logo" />
             </Link>
 
-            <Link to="/" className='xl:hidden lg:hidden md:hidden sm:hidden w-20 mx-2 h-20'>
-                <img src="src\img\venados-logo.png" className='xl:hidden lg:hidden md:hidden sm:hidden prevent-select-img w-20 h-20 ' alt="Venados logo mobile" />
+            <Link to="/" className='xl:hidden lg:hidden md:hidden block md:w-52 sm:w-52 w-20 mx-2 h-20'>
+                <img src="src\img\venados-logo.png" className='xl:hidden lg:hidden block  prevent-select-img w-20 h-20 ' alt="Venados logo mobile" />
             </Link>
 
                 <div className='xl:w-3/6 lg:w-full md:w-full sm:w-full w-7/12 xl:mx-4 lg:mx-4 md:mx-4 sm:mx-4'>
@@ -82,7 +82,7 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                 <div className='xl:w-72 lg:w-72 md:w-72 sm:w-72 xl:m-4 lg:m-4 md:m-4 sm:m-4 xl:overflow-visible lg:overflow-auto md:overflow-auto sm:overflow-auto xl:block lg:block md:block sm:block xl:px-4 lg:px-4 md:px-4 sm:px-4 items-center '>
                     <FontAwesomeIcon icon={faBars} className="text-red-600 h-10 ml-4 w-4  hover:scale-125 transition-transform xl:hidden lg:hidden md:hidden sm:hidden block" onClick={()=>{deployHamburgerMenu()}}/>
                     <div>
-                    <ul id='hamburger-menu' className='xl:relative lg:relative md:relative sm:relative absolute xl:right-10 right-1 w-12 xl:border-0 lg:border-0 md:border-0 sm:border-0 border-2 xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white xl:flex lg:flex md:flex sm:flex z-20'>
+                    <ul id='hamburger-menu' className='xl:relative lg:relative md:relative sm:relative absolute xl:right-10 lg:right-10 md:right-10 sm:right-10 w-12 xl:border-0 lg:border-0 md:border-0 sm:border-0 border-2 xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white xl:flex lg:flex md:flex sm:flex z-20'>
                         <li>
                         <Link to="/cart"> 
                             <FontAwesomeIcon icon={faCartShopping} className='text-red-600 h-6 p-4  hover:scale-125 hover:text-white transition-transform xl:block lg:block md:block sm:block' /> 
@@ -123,6 +123,7 @@ function SearchComponent({searchProductsByQuery,searchItem}) {
                 </ul>                                        
             </nav>
         </header>
+        <div className='w-full xl:h-44 lg:h-44 md:h-44 sm:h-44 h-52'></div>
         <Outlet/>
         </>
     );
