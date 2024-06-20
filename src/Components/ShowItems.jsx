@@ -1,5 +1,5 @@
 import React from 'react';
-
+import SnackBar from './SnackBar'
 function ShowItems({filteredItems,addItemToCart}) {
     return (
         <div className="product-list grid xl:grid-cols-5 md:grid-cols-5 sm:grid-cols-5 grid-cols-2 sm:w-128 w-full h-screen ">
@@ -19,6 +19,7 @@ function ShowItems({filteredItems,addItemToCart}) {
                     </div>          
             } 
             <div></div>
+            <SnackBar name="BOOB" className=""/>
         </div>
     );
 }
